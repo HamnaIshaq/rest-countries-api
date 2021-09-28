@@ -4,15 +4,12 @@
   color: $darkGrayLight;
   background: $white;
   position: relative;
-  /*margin: 0 31px;*/
-  //width: 40%;
-  //max-width: 400px;
   width: 200px;
   border-radius: 6px;
 
   &-label {
     position: absolute;
-    left: -1000px;
+    left: -10000px;
   }
 
   &-region {
@@ -34,25 +31,4 @@
       font-size: 14px;
     }
   }
-  /*
-  .dropdown-arrow {
-    position: absolute;
-    top: 0.25em;
-    right: 0.2em;
-    display: block;
-    width: 1rem;
-    height: 50%;
-    border-radius: 5px;
-    background: $white;
-    pointer-events: none;
-  }
-
-  .dropdown-arrow-icon {
-    position: absolute;
-    top: 2em;
-    right: 1.25em;
-    z-index: 2;
-    pointer-events: none;
-  }
-  */
 }
