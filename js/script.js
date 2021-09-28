@@ -53,6 +53,7 @@ function filterCountriesByRegion() {
   }
 }
 
+
 (async function fetchAllCountries() {
   const response = await fetch('https://restcountries.com/v2/all');
   const data = await response.json();
@@ -60,9 +61,15 @@ function filterCountriesByRegion() {
     showAllCountries(data);
   }
   else {
-    console.log('please wait');
-    //loading screen
+    // if data is not feteched from API
+    // Show an error message
     
+    countries.innerHTML = ` 
+      <div style="margin: 0 auto;">
+        <h2 style="text-align: center; font-size:3rem; margin: 0 0 0.5em 0;">Error: 500</h2>
+        Request for countries data from https://restcountries.com/v2/all was unsuccessfull. Please try again later.
+      </div>
+    `;
   }
 })()
 
