@@ -4,14 +4,6 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,49 +21,38 @@
   <body>
     <main>
       <header class="header">
-        <h1 class="header-h1">Where in the world?</h1>
-        <button class="header-btn">
-          <!--<i class="far fa-moon"></i>-->
-          <ion-icon name="moon-outline" class="header-btn-moon"></ion-icon>
-          Dark Mode
-        </button>
+        <div class="max-width-container">
+          <h1 class="header-h1">Where in the world?</h1>
+          <button class="header-btn">
+            <ion-icon name="moon-outline" class="header-btn-moon"></ion-icon>
+            Dark Mode
+          </button>
+        </div>
       </header>
 
       <div class="container">
-        <div id="search-country" class="search-country">
-          <label for="country-searched" class="search-country-label"
-            >Search for a country</label
-          >
-          <!--<i class="fas fa-search"></i>-->
-          <ion-icon name="search" class="search-country-icon"></ion-icon>
-          <input
-            type="text"
-            name="country-searched"
-            id="country-searched"
-            class="search-country-input"
-            placeholder="Search for a country..."
-          />
+        <div class="max-width-container search-filter-flex">
+          <div id="search-country" class="search-country">
+            <label for="country-searched" class="search-country-label">Search for a country</label>
+            <ion-icon name="search" class="search-country-icon"></ion-icon>
+            <input type="text" name="country-searched" id="country-searched" class="search-country-input"
+              placeholder="Search for a country..." />
+          </div>
+          
+          <div id="filter-region" class="filter-country">
+            <label for="region" class="filter-country-label">Filter by Region</label>
+            <select name="region" id="region" class="filter-country-region">
+              <option hidden value="">Filter by Region</option>
+              <option value="africa">Africa</option>
+              <option value="america">America</option>
+              <option value="asia">Asia</option>
+              <option value="europe">Europe</option>
+              <option value="oceania">Oceania</option>
+            </select>
+          </div>
         </div>
 
-        <div id="filter-region" class="filter-country">
-          <label for="region" class="filter-country-label"
-            >Filter by Region</label
-          >
-          <select name="region" id="region" class="filter-country-region">
-            <option hidden value="">Filter by Region</option>
-            <option value="africa">Africa</option>
-            <option value="america">America</option>
-            <option value="asia">Asia</option>
-            <option value="europe">Europe</option>
-            <option value="oceania">Oceania</option>
-          </select>
-        <!--
-          <ion-icon name="chevron-down" class="dropdown-arrow-icon"></ion-icon>
-          <span class="dropdown-arrow"></span>
-        -->
-        </div>
-
-        <section class="countries"></section>
+        <section class="countries max-width-container"></section>
       </div>
     </main>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
