@@ -54,7 +54,7 @@ function filterCountriesByRegion() {
 }
 
 (async function fetchAllCountries() {
-  const response = await fetch('https://restcountries.eu/rest/v2/all');
+  const response = await fetch('https://restcountries.com/v2/all');
   const data = await response.json();
   if (data) {
     showAllCountries(data);
@@ -62,16 +62,18 @@ function filterCountriesByRegion() {
   else {
     console.log('please wait');
     //loading screen
+    
   }
 })()
 
 function showAllCountries(data) {
+  
   let countryData = data.map((item) => {
     return `
       <div class="country-container">
         <a href="countryInfo.html?country=${item.alpha3Code}" class="country-link">
           <div class="country-img-container">
-            <img class="country-img" src=${item.flag} alt="country">
+            <img class="country-img" src=${item.flags.svg} alt="country">
           </div>
           <div class="country-info-container">
             <h3 class="country-name">${item.name}</h3>
