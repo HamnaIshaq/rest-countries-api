@@ -84,7 +84,7 @@ function showAllCountries(data) {
           </div>
           <div class="country-info-container">
             <h3 class="country-name">${item.name}</h3>
-            <p><strong>Population:</strong> <span>${item.population}</span></p>
+            <p><strong>Population:</strong> <span>${item.population.toLocaleString()}</span></p>
             <p><strong>Region:</strong> <span class="country-region">${item.region}</span></p>
             <p><strong>Capital:</strong> <span>${item.capital}</span></p>
           </div>

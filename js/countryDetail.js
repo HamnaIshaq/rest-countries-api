@@ -65,7 +65,7 @@ async function showCountryDetails(country) {
           <div class="country-info-flex">
             <div class="col-1">
               <p><strong>Native Name:</strong> ${country.nativeName}</p>
-              <p><strong>Population:</strong> ${country.population}</p>
+              <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
               <p><strong>Region:</strong> <span class="country-region">${country.region}</span></p>
               <p><strong>Sub Region:</strong> ${country.subregion}</p>
               <p><strong>Capital:</strong> ${country.capital || ' N/A'}</p>
